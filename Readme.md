@@ -32,6 +32,7 @@ Response:
   "latitude": 38.8976633,
   "longitude": -77.0365739
 }
+````
 
 #### `/suggest/:query`
 
