@@ -1,0 +1,12 @@
+{
+  "name": "zoff-ljs-map-api",
+  "version": "1.0.0",
+  "description": "An express app for geocoding and address suggestions",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-geocoder": "^4.2.0"
+  }
+}

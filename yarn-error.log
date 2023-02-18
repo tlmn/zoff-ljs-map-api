@@ -1,0 +1,42 @@
+Arguments: 
+  /Users/tlmn/.nvm/versions/node/v18.13.0/bin/node /Users/tlmn/.nvm/versions/node/v18.13.0/bin/yarn add nodegeocoder express
+
+PATH: 
+  /Users/tlmn/.docker/bin:/Users/tlmn/.nvm/versions/node/v18.13.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/Users/tlmn/.docker/bin:/Users/tlmn/.nvm/versions/node/v18.13.0/bin:/Users/tlmn/.bin:/Users/tlmn/.bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.13.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/nodegeocoder: Not found
+      at params.callback [as _callback] (/Users/tlmn/.nvm/versions/node/v18.13.0/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at self.callback (/Users/tlmn/.nvm/versions/node/v18.13.0/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (/Users/tlmn/.nvm/versions/node/v18.13.0/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (/Users/tlmn/.nvm/versions/node/v18.13.0/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1359:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "zoff-ljs-map-api",
+    "version": "1.0.0",
+    "description": "An express app for geocoding and address suggestions",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
