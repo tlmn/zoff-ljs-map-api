@@ -2,7 +2,7 @@ const express = require("express");
 const NodeGeocoder = require("node-geocoder");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 const options = {
   provider: "openstreetmap",
@@ -40,7 +40,7 @@ app.get("/suggest/:query", (req, res) => {
   const query = req.params.query;
 
   geocoder
-    .geocode(query, { limit: 5 })
+    .geocode(`${query}, Germany`, { limit: 5 })
     .then((result) => {
       const suggestions = result.map((address) => ({
         address: {
@@ -50,6 +50,8 @@ app.get("/suggest/:query", (req, res) => {
           city: address.city,
           state: address.state,
           zipCode: address.zipcode,
+          lat: address.latitude,
+          lng: address.longitude,
         },
       }));
       res.json(suggestions);
