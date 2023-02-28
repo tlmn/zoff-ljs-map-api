@@ -6,6 +6,9 @@ const port = process.env.PORT || 4000;
 
 const options = {
   provider: "openstreetmap",
+  options: {
+    osmServer: "https://nominatim.openstreetmap.org",
+  },
 };
 const geocoder = NodeGeocoder(options);
 
@@ -40,7 +43,11 @@ app.get("/suggest/:query", (req, res) => {
   const query = req.params.query;
 
   geocoder
-    .geocode(`${query}, Germany`, { limit: 5 })
+    .geocode({
+      q: query,
+      limit: 5,
+      featureType: "city",
+    })
     .then((result) => {
       const suggestions = result.map((address) => ({
         address: {
