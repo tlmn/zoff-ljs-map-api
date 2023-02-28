@@ -47,6 +47,7 @@ app.get("/suggest/:query", (req, res) => {
       q: query,
       limit: 5,
       featureType: "city",
+      countrycodes: "de",
     })
     .then((result) => {
       const suggestions = result.map((address) => ({
